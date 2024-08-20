@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dynamicalsystem.*"]
+namespaces = true
+
+[project]
+name = "dynamicalsystem-gigbot"
+version = "2024.08.001"
+#dynamic = ["version"]
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Programming Language :: Python"
+]
+
+[project.scripts]
+gigbot = "dynamicalsystem.gigbot.main:main"
